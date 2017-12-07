@@ -31,6 +31,11 @@ class AuthForm extends Component {
 							onChange={e => this.setState({ password: e.target.value })}
 						/>
 					</div>
+					{this.props.errors.map(error => (
+						<div key={error} className={`errors`}>
+							{error}
+						</div>
+					))}
 					<button className={`btn`}>Submit</button>
 				</form>
 			</div>
